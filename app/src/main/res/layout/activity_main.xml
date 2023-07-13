@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <ImageView
+        android:id="@+id/iv_circle"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_baseline_circle_24"
+        app:layout_constraintBottom_toTopOf="@+id/ed_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/iv_circle"
+        app:layout_constraintEnd_toEndOf="@id/iv_circle"
+        app:layout_constraintStart_toStartOf="@id/iv_circle"
+        app:layout_constraintTop_toTopOf="@id/iv_circle"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv_person"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+           android:src="@drawable/ic_baseline_person_add_alt_1_24" />
+
+    </LinearLayout>
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/ed_name"
+        android:layout_width="310dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="252dp"
+        android:background="@drawable/rounded"
+        android:hint="Name"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/ed_palindrome"
+        android:layout_width="310dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/rounded"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:hint="Palindrome"
+        app:layout_constraintEnd_toEndOf="@+id/ed_name"
+        app:layout_constraintHorizontal_bias="0.511"
+        app:layout_constraintStart_toStartOf="@+id/ed_name"
+        app:layout_constraintTop_toBottomOf="@+id/ed_name" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_check"
+        android:layout_width="310dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="28dp"
+        android:text="CHECK"
+        app:cornerRadius="12dp"
+        app:layout_constraintEnd_toEndOf="@+id/ed_palindrome"
+        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintStart_toStartOf="@+id/ed_palindrome"
+        app:layout_constraintTop_toBottomOf="@+id/ed_palindrome" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_next"
+        android:layout_width="310dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="28dp"
+        android:text="NEXT"
+        app:cornerRadius="12dp"
+        app:layout_constraintEnd_toEndOf="@+id/btn_check"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/btn_check"
+        app:layout_constraintTop_toBottomOf="@+id/btn_check" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
